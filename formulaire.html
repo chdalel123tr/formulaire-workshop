@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription au Workshop Pharma 4.0</title>
+    <!-- Inclure Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Inclure le style personnalisé si nécessaire -->
+    <style>
+        .form-container {
+            margin-top: 50px;
+        }
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px; /* Ajustez la largeur selon vos besoins */
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container form-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <img src="logo/logo.png" alt="Logo ISBST" class="logo">
+                        <h2>Formulaire d'inscription au Workshop Pharma 4.0</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="inscription.php" method="post">
+                            <div class="form-group">
+                                <label for="nom">Nom :</label>
+                                <input type="text" class="form-control" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom :</label>
+                                <input type="text" class="form-control" id="prenom" name="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email :</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Numéro de téléphone :</label>
+                                <input type="text" class="form-control" id="telephone" name="telephone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="universite">Université / Institut :</label>
+                                <input type="text" class="form-control" id="universite" name="universite" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="departement">Département / Spécialité :</label>
+                                <input type="text" class="form-control" id="departement" name="departement" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="niveau">Niveau d'études :</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="d1" name="niveau" value="Doctorant(e) 1ère année" required>
+                                    <label class="form-check-label" for="d1">Doctorant(e) 1ère année</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="d2" name="niveau" value="Doctorant(e) 2ème année" required>
+                                    <label class="form-check-label" for="d2">Doctorant(e) 2ème année</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="d3" name="niveau" value="Doctorant(e) 3ème année" required>
+                                    <label class="form-check-label" for="d3">Doctorant(e) 3ème année</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="autre" name="niveau" value="Autre" required>
+                                    <label class="form-check-label" for="autre">Autre :</label>
+                                    <input type="text" class="form-control" id="autre_niveau" name="autre_niveau">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="connaissances">Avez-vous des connaissances préalables sur Pharma 4.0 ?</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="oui" name="connaissances" value="Oui" required>
+                                    <label class="form-check-label" for="oui">Oui</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="non" name="connaissances" value="Non" required>
+                                    <label class="form-check-label" for="non">Non</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="objectifs">Quels sont vos objectifs pour ce workshop ? (Cochez tout ce qui s'applique)</label><br>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif1" name="objectifs[]" value="Apprendre les nouvelles technologies dans le secteur pharmaceutique">
+                                    <label class="form-check-label" for="objectif1">Apprendre les nouvelles technologies dans le secteur pharmaceutique</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif2" name="objectifs[]" value="Comprendre l'application de l'IA et du Machine Learning">
+                                    <label class="form-check-label" for="objectif2">Comprendre l'application de l'IA et du Machine Learning</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif3" name="objectifs[]" value="Explorer les applications de l'IoT">
+                                    <label class="form-check-label" for="objectif3">Explorer les applications de l'IoT</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif4" name="objectifs[]" value="Améliorer mes compétences en analyse des données et Big Data">
+                                    <label class="form-check-label" for="objectif4">Améliorer mes compétences en analyse des données et Big Data</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif5" name="objectifs[]" value="Connaître les mesures de cyber-sécurité dans l'industrie pharmaceutique">
+                                    <label class="form-check-label" for="objectif5">Connaître les mesures de cyber-sécurité dans l'industrie pharmaceutique</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="objectif_autre" name="objectifs[]" value="Autre">
+                                    <label class="form-check-label" for="objectif_autre">Autre :</label>
+                                    <input type="text" class="form-control" id="autre_objectif" name="autre_objectif">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="suggestions">Avez-vous des besoins spécifiques ou des suggestions pour le workshop ?</label><br>
+                                <textarea class="form-control" id="suggestions" name="suggestions"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="credits">J'accepte que ma participation soit comptabilisée pour 3 crédits dans mon cursus doctoral :</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="oui_credits" name="credits" value="Oui" required>
+                                    <label class="form-check-label" for="oui_credits">Oui</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="non_credits" name="credits" value="Non" required>
+                                    <label class="form-check-label" for="non_credits">Non</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inclure Bootstrap JS et les dépendances Popper.js et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
